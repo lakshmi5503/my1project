@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>bulma</title>
+        <link href="css/bulma.css" rel="stylesheet"/>
+        <link href="css/style.css" rel="stylesheet"/>
+
+        <script src="js/angular.js" ></script>
+
+    </head>
+    <body ng-app="myApp" ng-controller="myCtrl"  >        
+          Lakshmi value=   {{lakshmi}}
+        <div id="one" class="box" ng-show="lakshmi==100" >
+            hello my world...
+        </div>        
+        <button onclick ="mybulma()" class="button is-danger" type="button" >show</button>
+        <button onclick ="mybulma1()" class="button is-success" type="button" >hide</button>
+
+        <button ng-click="myfunc()" class="button is-danger" type="button" >show</button>
+        <button ng-click="myfunc_two()" class="button is-success" type="button" >hide</button>
+
+        <script src="js/script.js" ></script>
+        
+        <script>
+            var app = angular.module('myApp', []);
+
+            app.controller('myCtrl', function($scope) {
+                //var lakshmi = 1;
+                //var lakshmi = "test";                
+                $scope.lakshmi = 100;
+
+                /*function myfunc(){
+
+                }*/
+
+
+                $scope.myfunc = function(){
+                   $scope.lakshmi = 101;
+                }
+
+                $scope.myfunc_two = function(){
+                   $scope.lakshmi = 100;
+                }
+
+
+
+            });
+
+
+        </script>
+
+
+
+
+
+    </body>
+</html>

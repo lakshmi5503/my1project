@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>0111html</title>
+        <link href="css/bulma.css" rel="stylesheet"/>
+        <link href="css/style.css" rel="stylesheet"/>
+
+       <script src="js/angular.js"></script>
+
+    </head>
+
+        <body ng-app="myApp" ng-controller="myCtrl"  >  
+            {{a}}
+
+            <div class="box"     >
+                this is lakshmi smiley.....{{a}}
+            </div>
+
+            {{a"}}
+
+            <button ng-click="myfunc()" class="button is-danger" type="button"> hello </button>
+{{a}}
+                <script>
+                    var app = angular.module('myApp', []);
+                    app.controller('myCtrl', function($scope) {
+                   $scope.a="junnu";
+                    
+
+                    })
+
+
+                    </script>
+        </body>    
+</html>
